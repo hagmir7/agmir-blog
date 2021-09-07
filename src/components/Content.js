@@ -1,25 +1,16 @@
-import {React, useEffect, useState, Fragment} from 'react';
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Nav from "../components/Nav";
-import Content from "../components/Content";
-import App from '../App';
+import {React, Fragment} from 'react';
+
 
 
 
 function Detial(props){
-
-
-
-
-
     return(
        <Fragment>
   
         <div className='container p-3 bg-light' key={props.id}>
           <div className='row justify-content-center'>
           <div className='col-sm-12 col-md-10 col-lg-10 col-xl-8'>
-          <img className='w-100 img-detail' src={`http://127.0.0.1:8000${props.image}`} />  
+          <img className='w-100 img-detail' alt={props.title} src={props.image} />  
           </div>
 
           {/* <div className='col-sm-12 col-md-6 col-lg-6 col-xl-6'>

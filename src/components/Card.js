@@ -11,7 +11,7 @@ function Card(){
     const [items, setItems] = useState([]);
 
     const fetchItems = async () =>{
-        const data = await fetch('http://www.agmir.online/api/english');
+        const data = await fetch('https://www.agmir.online/en/api/english');
 
         const items = await data.json();
         console.log(items);
@@ -24,7 +24,7 @@ function Card(){
                 <div className='card'>
                     <Link to={`/detial/${item.id}`}>
                     <div className='content-image'>
-                    <img className='post-image' src={'http://www.agmir.online'+item.image} />
+                    <img className='post-image' alt={item.title} src={item.image} />
                     </div>
                     <div className='title-content border-top'>
                     <p className='m-2'>{item.title}</p>

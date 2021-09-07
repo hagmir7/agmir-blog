@@ -9,11 +9,11 @@ function Header(){
         <div className='row' style={{height: '130px'}}>
             <div className='logo col-sm-12 col-md-6 col-lg-6 col-xl-6 m-auto'>
                 <Link to='/'>
-                <img src={logo} />
+                <img alt='Bloge' src={logo} />
                 </Link>
             </div>
             <div className='ads  col-sm-12 col-md-6 col-lg-6 col-xl-6 sm-hidden'>
-            <img src={ads} className='w-75 h-100' />
+            <img alt='ads' src={ads} className='w-75 h-100' />
             </div>
         </div>
     )

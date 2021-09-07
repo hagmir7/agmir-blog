@@ -17,9 +17,9 @@ function Footer(){
                 </Link>
             </div>
             <div className='col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center'>
-                <a className='footer-link' href='#'><i class="fab fa-instagram"></i></a>
-                <a className='footer-link' href='#'><i class="fab fa-facebook"></i></a>
-                <a className='footer-link' href='#'><i class="fab fa-twitter"></i></a>
+                {/* <a className='footer-link' href='#'><i class="fab fa-instagram"></i></a>
+                <a className='footer-link' href='#'><i className="fab fa-facebook"></i></a>
+                <a className='footer-link' href='#'><i className="fab fa-twitter"></i></a> */}
             </div>
         </div>
     )

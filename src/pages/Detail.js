@@ -1,4 +1,4 @@
-import {React, useEffect, useState, Fragment} from 'react';
+import {React, useEffect, useState} from 'react';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
@@ -12,7 +12,7 @@ function Detial({match}){
     
     const [item, setItem] = useState({});
     const fetchItem = async () =>{
-        const fetchItem = await fetch(`http://www.agmir.online/ar/api/english_detail/${match.params.id}`);
+        const fetchItem = await fetch(`https://www.agmir.online/en/api/english_detail/${match.params.id}`);
         const item = await fetchItem.json();
         setItem(item.data)
     }
