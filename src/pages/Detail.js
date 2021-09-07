@@ -12,7 +12,7 @@ function Detial({match}){
     
     const [item, setItem] = useState({});
     const fetchItem = async () =>{
-        const fetchItem = await fetch(`http://127.0.0.1:8000/ar/api/english_detail/${match.params.id}`);
+        const fetchItem = await fetch(`http://www.agmir.online/ar/api/english_detail/${match.params.id}`);
         const item = await fetchItem.json();
         setItem(item.data)
     }
