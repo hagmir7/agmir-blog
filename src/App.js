@@ -1,25 +1,56 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Body from './components/Body';
+import About from './pages/About';
+import Policy from './pages/Policy';
+import Contact from './pages/Contact';
+import Popular from './pages/Popular';
+import Search from './pages/Search';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Detial from './pages/Detail';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+     
+   <Router>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/policy" component={Policy} />
+        <Route path="/contact" component={Contact} />
+        <Route path='/popular' component={Popular} />
+        {/* <Route path='/detail/:id' component={Detial} /> */}
+        <Route path='/detial/:id' component={Detial} />
+        <Route path='/search' component={Search} />
+      </Switch>
+   </Router>
+
     </div>
   );
+}
+
+const Home = ()=>{
+  document.title = 'Agmir Blog';
+  return(
+    <div>
+      < Footer/>
+      < Header/>
+      < Nav />
+      <div className='container'>
+        < Body />
+      </div>
+
+      <div className='border-top'> 
+        < Footer/>
+      </div>
+    </div>
+
+  )
 }
 
 export default App;

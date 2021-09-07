@@ -1,13 +1,152 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+  font-family: 'Roboto Slab', serif;
+}
+a{text-decoration: none;color: black;}
+button:focus{
+  outline: none!important;
+  box-shadow: none!important;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+}
+.ads{
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input{
+  outline: none!important;
+  box-shadow: none!important;
 }
+
+nav{
+  background-color: #6b48ff!important;
+  margin: 0;
+  padding: 5px!important;
+}
+.nav-link{
+  color: white!important;
+  margin-left: 2rem;
+  padding: 3px;
+  
+}
+.nav-link:hover{
+  background-color: #565d65a6;
+  border-radius: 5px;
+}
+.search-input{
+  border-radius: 18px;
+    border: none;
+    background: #d0e0ef;
+}
+.search-button{
+    border-radius: 40px;
+    background: #d0e0ef;
+    border: none;
+}
+.search-button:hover{
+  background-color: #0ec2e6;
+}
+
+.footer-link{
+  margin-right: 16px;
+  text-decoration: none;
+  font-size: 13px;
+}
+.card{
+  margin: .25rem;
+  overflow: hidden;
+}
+.last{
+ max-width: 100%;
+ 
+}
+.row{
+  margin: 0;
+  padding: 0;
+}
+.content-image{
+  height: 195px;
+}
+.post-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-tols{
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-content{
+  height: 55px;
+}
+.img-detail{
+  min-height: 300px;
+  max-height: 300px;
+  object-fit: contain;
+}
+.policy p{
+  padding: 0;
+}
+
+.btn-ag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  padding: 0 20px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;}
+
+.ag-blue {
+    background: linear-gradient(180deg,#42a5f5,#2196f3);
+    color: white;
+}
+
+
+
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+
+  
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+  
+ }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  .nav-link {
+    text-align: center!important;
+    margin: .25rem;
+    padding: .40rem;
+  }
+  .sm-hidden{
+    display: none;
+  }
+  
+ }
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) { 
+  
+ }
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) { 
+  
+ }
