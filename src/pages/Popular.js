@@ -2,8 +2,8 @@ import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import Body from "../components/Body";
 import { Spin } from 'antd';
+import Product from "../components/Product";
 
 
 function Popular() {
@@ -16,7 +16,7 @@ function Popular() {
       < Nav />
       <div className='container'>
         <Spin />
-        <Body />
+        <Product />
       </div>
 
       <div className='border-top'> 

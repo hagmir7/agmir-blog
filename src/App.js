@@ -10,6 +10,8 @@ import Popular from './pages/Popular';
 import Search from './pages/Search';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
+import Posts from './pages/Posts';
+import ProductDtail from './pages/ProductDtail';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
         {/* <Route path='/detail/:id' component={Detial} /> */}
         <Route path='/detial/:id' component={Detial} />
         <Route path='/search' component={Search} />
+         <Route path='/posts' component={Posts} />
+         <Route path='/product-detail' component={ProductDtail} />
       </Switch>
    </Router>
 
