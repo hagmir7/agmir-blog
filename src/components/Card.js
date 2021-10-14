@@ -11,7 +11,7 @@ function Card(){
     const [items, setItems] = useState([]);
 
     const fetchItems = async () =>{
-        const data = await fetch('https://www.agmir.online/en/api/english');
+        const data = await fetch('https://www.freewsad.com/en/api/english');
 
         const items = await data.json();
         console.log(items);
