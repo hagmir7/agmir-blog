@@ -12,7 +12,7 @@ function Detial({match}){
     
     const [item, setItem] = useState({});
     const fetchItem = async () =>{
-        const fetchItem = await fetch(`https://www.freewsad.com/en/api/english_detail/${match.params.id}`);
+        const fetchItem = await fetch(`https://freewsad.herokuapp.com/en/api/english_detail/${match.params.id}`);
         const item = await fetchItem.json();
         setItem(item.data)
     }
