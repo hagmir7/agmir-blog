@@ -1,7 +1,5 @@
 
-/* *{
-  font-family: 'Roboto Slab', serif;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
 a{text-decoration: none;color: black;}
 button:focus{
   outline: none!important;
@@ -71,9 +69,10 @@ input{
   /* height: 55px; */
 }
 .img-detail{
-  min-height: 300px;
-  max-height: 300px;
-  object-fit: contain;
+  min-height: 339px;
+  max-height: 339px;
+  height: 339px;
+  object-fit: cover;
 }
 .policy p{
   padding: 0;
@@ -98,6 +97,7 @@ input{
     background: linear-gradient(180deg,#42a5f5,#2196f3);
     color: white;
 }
+
 
 
 .content-image-product {

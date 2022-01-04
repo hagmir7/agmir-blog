@@ -16,8 +16,6 @@ function Detial({match}){
         const item = await fetchItem.json();
         setItem(item.data)
     }
-    
-    document.title = item.title;
 
 
     return(
