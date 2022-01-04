@@ -22,7 +22,6 @@ function Detial({match}){
 
     return(
         <div>
-        < Footer/>
         < Header/>
         < Nav />
         < Content id={item.id} title={item.title} image={item.image} views={item.views}

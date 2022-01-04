@@ -6,38 +6,80 @@ import {Link} from 'react-router-dom';
 
 function Nav(){
     return(
-        <nav className="navbar navbar-expand-lg navbar-light text-white">
-        <div className="container-fluid">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon text-white"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                    <Link className='nav-link active text-white' aria-current="page" to='/'>Home</Link>
+<header className="navbar-light navbar-sticky header-static mb-3 border-bottom  bg-white">
+
+
+  <nav className="navbar navbar-expand-lg p-0">
+    <div className="container">
+
+      <h1><a className="nav-item logo h4" href="/">FreeWsad</a></h1>
+
+        <a href="/menu/" className="navbar-toggler ms-auto"><span className="navbar-toggler-icon"></span></a>
+
+      <div className="collapse navbar-collapse" id="navbarCollapse">
+        <ul className="navbar-nav navbar-nav-scroll mx-auto">
+          <li className="nav-link"><a className="text-bold text-default" href="/">Home</a></li>
+          {/* <li className="nav-item dropdown nav-link">
+            <a className=" text-bold text-default" href="#" id="homeMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Menu</a>
+            <ul className="dropdown-menu">
+
+              <li> 
+                <a className="dropdown-item" href="/language/"><i className="bi bi-geo-alt"></i> Language</a>
                 </li>
-                <li className="nav-item">
-                <Link className="nav-link" to='/popular'>Popular</Link>
-                </li>
-                <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Category
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="#">Sport</a></li>
-                    <li><a className="dropdown-item" href="#">Health</a></li>
-                    <li><a className="dropdown-item" href="#">Programming</a></li>
-                    <li><a className="dropdown-item" href="#">Cooking</a></li>
-                </ul>
-                </li>
+                
+              <li>
+                <a className="dropdown-item" href="/new_topic/"><i className="bi bi-plus-circle"></i> New Topic</a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="/create_book/"><i className="bi bi-plus-square"></i> New Book</a>
+              </li>
+              <li> 
+                <a className="dropdown-item" href="/dashboard/"><i className="bi bi-grid"></i> Dashboard</a>
+              </li>
+              
+              <li>
+                <a className="dropdown-item" href="index-4.html"><i className="bi bi-life-preserver"></i> Support</a>
+              </li>
+              
+              <li> 
+                <a className="dropdown-item" href="/settings/"><i className="bi bi-gear"></i> Settings</a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="/accounts/logout/"><i className="bi bi-power"></i> Log out</a>
+              </li>
+              
+
             </ul>
-            <form className="d-flex">
-                <input className="form-control me-2 search-input" id='search' name='result' type="search" placeholder="Search" aria-label="Search"/>
-                <button className="btn btn-outline-success search-button" type="submit">Search</button>
-            </form>
-            </div>
+          </li> */}
+          <li className="nav-item nav-link"> <a className=" text-bold text-default" href="/topic/">Posts</a></li>
+          <li className="nav-item nav-link"> <a className=" text-bold text-default" href="/books/">Books</a></li>
+        </ul>
+      </div>
+      <div className="nav flex-nowrap align-items-center">
+        <div className="nav-item d-none d-md-block">
+          <a href="#" className="btn btn-sm btn-danger mb-0 mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Subscribe!</a>
         </div>
-        </nav>
+        <div className="nav-item dropdown nav-search">
+          <a className="nav-link " role="button" href="#" id="navSearch" data-bs-toggle="dropdown" aria-expanded="false">
+            <i className="bi bi-search"></i>
+          </a>
+          <div className="dropdown-menu dropdown-menu-end shadow rounded p-2 search" aria-labelledby="navSearch">
+            <form className="input-group" action="/en/search/" method="post">
+              <input type="hidden" name="csrfmiddlewaretoken" value="ziXs42RwhfoKmvXRp4GGCn4fpxGZ3eItuObZdysMzF3449w1GWmx7zbE7VfSUiOf" className="form-control" />
+
+              <button className="btn btn-success m-0 " type="submit">Search</button>
+              <input className="form-control border-success px-2" name="search" type="search" placeholder="Search..." aria-label="Search" />
+              
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
         
     )
 }

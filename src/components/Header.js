@@ -6,16 +6,33 @@ import {Link} from 'react-router-dom';
 
 function Header(){
     return(
-        <div className='row' style={{height: '130px'}}>
-            <div className='logo col-sm-12 col-md-6 col-lg-6 col-xl-6 m-auto'>
-                <Link to='/'>
-                <img alt='Bloge' src={logo} />
-                </Link>
-            </div>
-            <div className='ads  col-sm-12 col-md-6 col-lg-6 col-xl-6 sm-hidden'>
-            <img alt='ads' src={ads} className='w-75 h-100' />
-            </div>
+        <div className="navbar-top d-none d-lg-block small bg-white">
+        <div className="">
+          <div className="d-md-flex justify-content-between align-items-center p-2">
+            <ul className="nav">
+              <li className="nav-item">
+                <a className="nav-link text-muted ps-0" href="/about/">About</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-muted" href="/contact/">Contact</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-muted" href="/policy">Privacy Policy</a>
+              </li>
+              
+            </ul>
+        
+            {/* <div className="d-flex align-items-center">
+              <a href="/freewsad">
+                <img src="https://agmir-media.s3.amazonaws.com/user_default.webp?AWSAccessKeyId=AKIASQITCY4Y5YL736O2&amp;Signature=6cFJZtKjUbIcRCxg1ypYCc0W5PQ%3D&amp;Expires=1641301681" className="rounded-circle cover" style={{width:'35px', height:'35px'}} alt="Freewsad" />
+              </a>
+            </div> */}
+            
+          </div>
+    
+          <div className="border-bottom  nav-border opacity-1"></div>
         </div>
+      </div>
     )
 }
 

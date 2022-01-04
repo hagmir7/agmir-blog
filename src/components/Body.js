@@ -10,7 +10,7 @@ function Body(){
 
 
     return(
-        <div className='bg-light'>
+        <div className=''>
             <Card />
         </div>
     )

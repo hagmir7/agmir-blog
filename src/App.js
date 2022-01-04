@@ -12,6 +12,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
 import Posts from './pages/Posts';
 import ProductDtail from './pages/ProductDtail';
+import Hr from './ads/Hr';
 
 
 function App() {
@@ -39,13 +40,12 @@ function App() {
 }
 
 const Home = ()=>{
-  document.title = 'Agmir Blog';
   return(
-    <div>
-      < Footer/>
+    <div className='bg-light' >
       < Header/>
       < Nav />
       <div className='container'>
+        <Hr />
         < Body />
       </div>
 
