@@ -13,6 +13,8 @@ import Detial from './pages/Detail';
 import Posts from './pages/Posts';
 import ProductDtail from './pages/ProductDtail';
 import Hr from './ads/Hr';
+import Ads from './components/Ads';
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
         <Route path='/search' component={Search} />
          <Route path='/posts' component={Posts} />
          <Route path='/product-detail' component={ProductDtail} />
+         <Route path='/ads.txt' component={Ads} />
       </Switch>
    </Router>
 

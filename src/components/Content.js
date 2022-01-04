@@ -29,6 +29,9 @@ function Detial(props) {
                     <meta name="og:title" property="og:title" content={props.tags}></meta>
                     <meta itemprop="image" content={props.image} />
                     <meta property="og:image" content={props.image} />
+                    <meta property="og:title" content={props.title} />
+                    <meta property="og:image" content="/static/img/logo.3cb1ef0ef390.png" />
+                    <meta property="og:description" content={props.description} />
                 </Helmet>
                 <Body />
             </div>
