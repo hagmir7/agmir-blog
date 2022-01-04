@@ -48,7 +48,7 @@ const Home = ()=>{
         <Hr />
         < Body />
       </div>
-
+      <Hr />
       <div className='border-top'> 
         < Footer/>
       </div>
