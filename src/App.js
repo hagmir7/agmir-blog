@@ -48,10 +48,10 @@ const Home = ()=>{
       < Header/>
       < Nav />
       <div className='container'>
-        <Hr />
+  
         < Body />
       </div>
-      <Hr />
+
       <div className='border-top'> 
         < Footer/>
       </div>
