@@ -1,7 +1,8 @@
 import { React, Fragment } from 'react';
 import { Helmet } from "react-helmet";
 import Hr from '../ads/Hr';
-import Body from './Body';
+import BodyDetail from './BodyDetail';
+
 
 
 function Detial(props) {
@@ -15,7 +16,7 @@ function Detial(props) {
                         </div>
                         <Hr />
                         <div className='d-flex justify-content-center mt-2'>
-                            <div className=''>
+                            <div className='w-100'>
                                 <h1 className='h3'>{props.title}</h1>
                                 <div dangerouslySetInnerHTML={{ __html: props.body }} />
                             </div>
@@ -30,10 +31,25 @@ function Detial(props) {
                     <meta itemprop="image" content={props.image} />
                     <meta property="og:image" content={props.image} />
                     <meta property="og:title" content={props.title} />
-                    <meta property="og:image" content="/static/img/logo.3cb1ef0ef390.png" />
+                    <meta property="og:image" content={props.image} />
                     <meta property="og:description" content={props.description} />
+
+
+                    <meta name="twitter:site" content="@FreeWsad" />
+                    <meta name="twitter:title" content={props.title} />
+                    <meta name="twitter:description" content={props.description} />
+                    <meta name="twitter:creator" content="@FreeWsad" />
+                    <meta name="twitter:image" content={props.image} />
+
+                    <meta property="og:title" content={props.title} />
+                    
+                    <meta property="og:url" content="htttps://www.freewsad.com" />
+                    <meta property="og:image" content={props.image} />
+                    <meta property="og:description" content={props.description} />
+                    <meta property="og:site_name" content="FreeWsad" />
+                     <meta name="author" content="freewsad.com" />
                 </Helmet>
-                <Body />
+                <BodyDetail />
             </div>
         </Fragment>
     )

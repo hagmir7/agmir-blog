@@ -1,13 +1,12 @@
 import {React, useEffect} from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { Helmet } from "react-helmet";
 import Nav from "../components/Nav";
 
 
 function About() {
-  useEffect(() => {
-    document.title = "Agmir | About";
- }, []);
+
 
 
 
@@ -15,6 +14,9 @@ function About() {
     <div className="About">
         <Header />
         <Nav />
+        <Helmet>
+          <title>FreeWsad | About</title>
+        </Helmet>
           <div className="container">
             <div className="row">
             <div className='card shadow-sm p-3'>

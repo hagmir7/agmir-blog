@@ -2,16 +2,18 @@ import { React, useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import { Helmet } from "react-helmet";
 
 
 function Policy() {
-  useEffect(() => {
-    document.title = "Agmir | Policy";
-  }, []);
+
   return (
     <div className="Policy">
       <Header />
       <Nav />
+      <Helmet>
+          <title>FreeWsad | Policy</title>
+      </Helmet>
       <div className='container bg-light p-3 policy'>
         <h1 className="h3">Privacy Policy</h1>
         <p>Last updated: December 19, 2021</p>

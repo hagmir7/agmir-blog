@@ -12,7 +12,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
 import Posts from './pages/Posts';
 import ProductDtail from './pages/ProductDtail';
-import Hr from './ads/Hr';
 import Ads from './components/Ads';
 
 
@@ -21,7 +20,6 @@ function App() {
   return (
     <div className="App">
 
-     
    <Router>
       <Switch>
         <Route path="/" exact component={Home} />

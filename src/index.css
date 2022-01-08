@@ -18,7 +18,9 @@ input{
   box-shadow: none!important;
 }
 
-
+#d-none{
+  display: none!important;
+}
 
 .search-input{
   border-radius: 18px;
@@ -69,9 +71,7 @@ input{
   /* height: 55px; */
 }
 .img-detail{
-  min-height: 339px;
-  max-height: 339px;
-  height: 339px;
+  height: 400px;
   object-fit: cover;
 }
 .policy p{
@@ -139,9 +139,7 @@ input{
  box-shadow: none;
 }
 
-*{
- font-family: var(--bs-font-sans-serif)!important;
-}
+
 body{
  background-color: #e9ecef73;
 }

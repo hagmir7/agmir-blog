@@ -3,12 +3,13 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 
+import { Helmet } from "react-helmet";
+
 function Contact() {
-  document.title = 'Agmir | Contact';
+
 
   return (
     <div className="Contact">
-        <Footer />
         <Header />
         <Nav />
         <div className='container bg-light p-3'>
@@ -32,6 +33,9 @@ function Contact() {
                 </div>
             </div>
         </div>
+        <Helmet>
+          <title>FreeWsad | Contact</title>
+        </Helmet>
         <Footer />
     </div>
   );
