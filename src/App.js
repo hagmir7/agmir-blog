@@ -12,7 +12,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
 import Posts from './pages/Posts';
 import ProductDtail from './pages/ProductDtail';
-import Ads from './components/Ads';
+
+
 
 
 
@@ -28,11 +29,10 @@ function App() {
         <Route path="/contact" component={Contact} />
         <Route path='/popular' component={Popular} />
         {/* <Route path='/detail/:id' component={Detial} /> */}
-        <Route path='/detial/:id' component={Detial} />
+        <Route path='/detail/:id' component={Detial} />
         <Route path='/search' component={Search} />
          <Route path='/posts' component={Posts} />
          <Route path='/product-detail' component={ProductDtail} />
-         <Route path='/ads.txt' component={Ads} />
       </Switch>
    </Router>
 
@@ -46,7 +46,6 @@ const Home = ()=>{
       < Header/>
       < Nav />
       <div className='container'>
-  
         < Body />
       </div>
 

@@ -6,8 +6,6 @@ import Nav from "../components/Nav";
 import { Helmet } from "react-helmet";
 
 function Contact() {
-
-
   return (
     <div className="Contact">
         <Header />
@@ -27,14 +25,15 @@ function Contact() {
                     <textarea className='form-control mb-3' name='message' placeholder='Message...' />
 
                      <button className='btn btn-ag ag-blue'>Send</button>
-
                   </form>
 
                 </div>
             </div>
         </div>
         <Helmet>
-          <title>FreeWsad | Contact</title>
+          <title>Contact Us | FreeWsad</title>
+          <link rel='canonical' href="/policy" />
+
         </Helmet>
         <Footer />
     </div>

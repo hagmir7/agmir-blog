@@ -15,18 +15,7 @@ function Card(){
         const items = await data.json();
         setItems(items.data)
 
-       
-
-   
-
-        
-
-
     }
-
-    
-
-    
 
     return(
         <div>
@@ -34,7 +23,7 @@ function Card(){
             {items.map(item => (
             <div key={item.id} className='col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4'>
                 <div className='card'>
-                    <Link to={`/detial/${item.id}`}>
+                    <Link to={`/detail/${item.id}`}>
                     <div className='content-image'>
                     <img className='post-image' alt={item.title} src={item.image} />
                     </div>

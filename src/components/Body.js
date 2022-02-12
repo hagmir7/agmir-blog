@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, Fragment } from 'react';
 import Card from './Card';
 
 
@@ -7,12 +7,10 @@ import Card from './Card';
 
 
 function Body(){
-
-
     return(
-        <div className=''>
+        <Fragment>
             <Card />
-        </div>
+        </Fragment>
     )
 }
 export default Body;

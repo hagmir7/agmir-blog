@@ -23,7 +23,7 @@ function Detial({match}){
         < Header/>
         < Nav />
         < Content id={item.id} title={item.title} image={item.image} views={item.views}
-         category_en={item.category_en} date={item.date} body={item.body}
+         category_en={item.category_en} date={item.date} body={item.body} description={item.description} tags={item.tags}
         />
   
         <div className='border-top'> 

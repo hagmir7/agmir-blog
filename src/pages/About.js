@@ -6,17 +6,14 @@ import Nav from "../components/Nav";
 
 
 function About() {
-
-
-
-
   return (
     <div className="About">
+      <Helmet>
+        <title>About Us - FreeWsad</title>
+        <link rel='canonical' href="/policy" />
+      </Helmet>
         <Header />
         <Nav />
-        <Helmet>
-          <title>FreeWsad | About</title>
-        </Helmet>
           <div className="container">
             <div className="row">
             <div className='card shadow-sm p-3'>

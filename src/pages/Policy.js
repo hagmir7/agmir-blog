@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
@@ -9,11 +9,13 @@ function Policy() {
 
   return (
     <div className="Policy">
+      <Helmet>
+        <title>Policy - FreeWsad</title>
+        <link rel='canonical' href="/policy" />
+      </Helmet>
       <Header />
       <Nav />
-      <Helmet>
-          <title>FreeWsad | Policy</title>
-      </Helmet>
+ 
       <div className='container bg-light p-3 policy'>
         <h1 className="h3">Privacy Policy</h1>
         <p>Last updated: December 19, 2021</p>
@@ -189,6 +191,7 @@ function Policy() {
         </ul>
       </div>
       <Footer />
+
     </div>
   );
 }

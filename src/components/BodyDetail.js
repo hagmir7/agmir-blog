@@ -15,13 +15,6 @@ function BodyDetail(){
         const items = await data.json();
         setItems(items.data)
 
-       
-
-   
-
-        
-
-
     }
 
     

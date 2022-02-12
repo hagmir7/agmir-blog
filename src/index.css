@@ -70,10 +70,7 @@ input{
 .title-content{
   /* height: 55px; */
 }
-.img-detail{
-  height: 400px;
-  object-fit: cover;
-}
+
 .policy p{
   padding: 0;
 }
