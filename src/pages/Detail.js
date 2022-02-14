@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Content from '../components/Content';
+import LoadingDetail from '../components/LoadignDetail';
 
 
 function Detial({match}){
@@ -10,11 +11,19 @@ function Detial({match}){
         fetchItem();
     },[]);
     
-    const [item, setItem] = useState({});
+    const [item, setItem] = useState(null);
     const fetchItem = async () =>{
         const fetchItem = await fetch(`https://freewsad.herokuapp.com/en/api/english_detail/${match.params.id}`);
         const item = await fetchItem.json();
-        setItem(item.data)
+        const data_item = item.data;
+        const data = ()=>{
+          return (
+            < Content id={data_item.id} title={data_item.title} image={data_item.image} views={data_item.views}
+            category_en={data_item.category_en} date={data_item.date} body={data_item.body} description={data_item.description} tags={item.tags}
+           />
+          )
+        }
+        setItem(data)
     }
 
 
@@ -22,10 +31,7 @@ function Detial({match}){
         <div>
         < Header/>
         < Nav />
-        < Content id={item.id} title={item.title} image={item.image} views={item.views}
-         category_en={item.category_en} date={item.date} body={item.body} description={item.description} tags={item.tags}
-        />
-  
+        <div className="container">{item?item:<LoadingDetail />}</div>
         <div className='border-top'> 
           < Footer/>
         </div>

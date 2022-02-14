@@ -12,6 +12,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
 import Posts from './pages/Posts';
 import ProductDtail from './pages/ProductDtail';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -52,6 +53,13 @@ const Home = ()=>{
       <div className='border-top'> 
         < Footer/>
       </div>
+      <Helmet>
+          <title>FreeWsad - The Best Website For Education</title>
+          <meta name="description" content="You can enjoy the Topics and Courses you love and download the original content, and share it all with your friends in FreeWsad." data-rh="true" />
+          <meta name="author" content="freewsad.com" />
+          <link rel='canonical' href="/" />
+          <meta itemprop="image" content="%PUBLIC_URL%/favicon.webp" data-rh="true" />
+      </Helmet>
     </div>
 
   )

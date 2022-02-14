@@ -156,6 +156,76 @@ a{text-decoration: none;}
 .comment-scroll{max-height: 300px;}
 
 
+
+/* Loading Card */
+
+
+:root {
+  --loading-grey: #ededed;
+}
+
+
+
+.image {
+  height: 200px;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+.content {
+  padding: 2rem 1.8rem;
+}
+
+h4 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.loading .image,
+.loading h4,
+.loading .description {
+  background-color: var(--loading-grey);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, 0) 60%
+  ) var(--loading-grey);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
+
+.loading h4 {
+  min-height: 1.6rem;
+  border-radius: 4px;
+  animation-delay: .05s;
+}
+
+.loading .description {
+  min-height: 4rem;
+  border-radius: 4px;
+  animation-delay: .06s;
+}
+
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
 

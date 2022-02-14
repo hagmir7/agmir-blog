@@ -1,22 +1,38 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import { Spin } from 'antd';
 import Product from "../components/Product";
-
+import Loading from "../components/Loading";
 
 function Popular() {
-  document.title = 'Agmir | Popular';
 
+  const [post, setPost] = useState(null)
+
+  useEffect(()=> {
+    fetch("https://freewsad.herokuapp.com/en/api/english")
+    .then(respons=>respons.json())
+    .then(respons=>{
+      const rspo = respons.data
+      const post = ()=>{
+        return(
+          rspo.map(item =>(
+            <Product title={item.title}  image={item.image}/>
+          ))
+        )
+      }
+      setPost(post)
+    })
+  })
   return (
     <div>
-      < Footer/>
+ 
       < Header/>
       < Nav />
       <div className='container'>
-        <Spin />
-        <Product />
+      <div className="row last">
+      {post?post:<Loading />}
+      </div>
       </div>
 
       <div className='border-top'> 
