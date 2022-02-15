@@ -10,6 +10,7 @@ function Detial(props) {
             <div className='container p-0' key={props.id}>
                 <div className='row justify-content-center p-0'>
                     <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8 card shadow-sm'>
+                        <Hr />
                         <div className='shdow-sm card mt-3 mb-3'>
                             <img className='w-100 img-detail' alt={props.title} src={props.image} />
                         </div>
