@@ -1,4 +1,4 @@
-import React, { Component  } from 'react'
+import React, { Component  } from 'react';
 
 
 class Hr extends Component {
@@ -23,4 +23,9 @@ class Hr extends Component {
 
 
 
+
+
 export default Hr;
+
+
+

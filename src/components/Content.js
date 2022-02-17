@@ -2,6 +2,14 @@ import { React, Fragment } from 'react';
 import Hr from '../ads/Hr';
 import BodyDetail from './BodyDetail';
 import { Helmet } from 'react-helmet-async';
+import Fk from '../ads/Fk';
+
+// function my(){
+//     var first =  document.getElementById("myList").firstChild()
+//     console.log("this is the first child "+ first)
+//    }
+// setInterval(my())
+// console.log("working")
 
 
 function Detial(props) {
@@ -9,12 +17,13 @@ function Detial(props) {
         <Fragment>
             <div className='container p-0' key={props.id}>
                 <div className='row justify-content-center p-0'>
-                    <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8 card shadow-sm'>
+                    <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8 card shadow-sm' id='myList'>
+                        <div className='fka'><Fk /></div>
                         <Hr />
                         <div className='shdow-sm card mt-3 mb-3'>
                             <img className='w-100 img-detail' alt={props.title} src={props.image} />
                         </div>
-                        <Hr />
+                        <Fk />
                         <div className='d-flex justify-content-center mt-2'>
                             <div className='w-100'>
                                 <h1 className='h3'>{props.title}</h1>
@@ -22,6 +31,7 @@ function Detial(props) {
                             </div>
                         </div>
                         <Hr />
+                        
                     </div>
                 </div>
                 <Helmet>
