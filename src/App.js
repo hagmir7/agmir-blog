@@ -6,7 +6,6 @@ import Body from './components/Body';
 import About from './pages/About';
 import Policy from './pages/Policy';
 import Contact from './pages/Contact';
-import Popular from './pages/Popular';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
 import { Helmet } from 'react-helmet-async';
@@ -25,7 +24,6 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/policy" component={Policy} />
         <Route path="/contact" component={Contact} />
-        <Route path='/popular' component={Popular} />
         {/* <Route path='/detail/:id' component={Detial} /> */}
         <Route path='/detail/:id' component={Detial} />
         
