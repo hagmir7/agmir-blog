@@ -2,7 +2,6 @@ import {React, useState, useEffect} from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
-import Product from "../components/Product";
 import Loading from "../components/Loading";
 
 function Popular() {

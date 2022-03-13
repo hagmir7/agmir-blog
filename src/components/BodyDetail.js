@@ -25,7 +25,7 @@ function BodyDetail(){
                             <img className='post-image' alt={item.title} src={item.image} />
                             </div>
                             <div className='title-content border-top'>
-                            <p className='m-2'>{item.title}</p>
+                            <p className='m-2 h6'>{item.title}</p>
                             </div>
                             </a>
                         </div>
