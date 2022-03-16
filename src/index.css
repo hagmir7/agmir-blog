@@ -229,9 +229,16 @@ h4 {
   animation-delay: .06s;
 }
 
+.book-detail-image {
+  width: 300px;
+}
+
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+  .book-detail-image {
+    width: 200px;
+}
 
   
  }

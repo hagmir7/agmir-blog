@@ -9,6 +9,8 @@ import Contact from './pages/Contact';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Detial from './pages/Detail';
 import { Helmet } from 'react-helmet-async';
+import Book from './pages/Book';
+import BookDetail from './pages/BookDetail';
 
 
 
@@ -26,6 +28,8 @@ function App() {
         <Route path="/contact" component={Contact} />
         {/* <Route path='/detail/:id' component={Detial} /> */}
         <Route path='/detail/:id' component={Detial} />
+        <Route path='/books' component={Book} />
+        <Route path='/book/:id' component={BookDetail} />
         
       </Switch>
    </Router>

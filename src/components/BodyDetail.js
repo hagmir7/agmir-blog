@@ -42,7 +42,7 @@ function BodyDetail(){
 
     return(
         <div>
-            <div className='last row p-2 pb-3'>
+            <div className='row p-2 pb-3 justify-content-center'>
                 {items?items:<Loading />}
             </div>
         </div>

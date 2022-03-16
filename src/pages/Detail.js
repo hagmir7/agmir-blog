@@ -31,7 +31,11 @@ function Detial({match}){
         <div>
         < Header/>
         < Nav />
-        <div className="container">{item?item:<LoadingDetail />}</div>
+        <div className="container">
+         <div className='row justify-content-center'>
+         {item?item:<LoadingDetail />}
+         </div>
+        </div>
         <div className='border-top'> 
           < Footer/>
         </div>
