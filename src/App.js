@@ -11,7 +11,7 @@ import Detial from './pages/Detail';
 import { Helmet } from 'react-helmet-async';
 import Book from './pages/Book';
 import BookDetail from './pages/BookDetail';
-import Menu from './pages/Menu';
+import Menu from './pages/Menu'
 
 
 
