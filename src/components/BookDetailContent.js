@@ -6,7 +6,7 @@ const BookDetailContent = (props) => {
     return (
         <div className="container-lg">
             <div className="row" key={props.id}>
-            <div className="col-6 col-md-7 col-lg-8 col-xl-8 mb-3 card m-0 shadow-sm">
+            <div className="col-12 col-md-7 col-lg-8 col-xl-8 mb-3 card m-0 shadow-sm">
                 <article className="blog-post">
                     <h1 className="blog-post-title h4 mt-2">{props.name}</h1>
                     <p className="text-left">{props.description}</p>
@@ -44,11 +44,11 @@ const BookDetailContent = (props) => {
                         </div>
                 </article>
             </div>
-            <div className="col-6 col-md-5 col-lg-4 col-xl-4 position-relative">
+            <div className="col-12 col-md-5 col-lg-4 col-xl-4 position-relative">
                 <div className="position-sticky top-0">
-                    <div className="card shadow-sm">
+                    {/* <div className="card shadow-sm">
                     Ads
-                    </div>
+                    </div> */}
                     <div className="p-4 mt-3 bg-light card shadow-sm border">
                         <span className="fst-italic h4 p-1">Copyrights</span>
                         <p className="text-left">

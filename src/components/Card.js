@@ -23,7 +23,7 @@ function Card(){
         const item = ()=>{
             return(
                 dataItem.map(item => (
-                    <div key={item.id} className='col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4' title={item.title}>
+                    <div key={item.id} className='col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4' title={item.title}>
                         <div className='card'>
                             <Link to={`/detail/${item.id}`}>
                             <div className='content-image'>

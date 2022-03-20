@@ -7,15 +7,25 @@ import Fk from '../ads/Fk';
 
 
 function Detial(props) {
+
+    const defaultImage = 'https://agmir-media.s3.amazonaws.com/default-post.png';
+    const isDefaul = defaultImage.slice(0,53) == props.image.slice(0,53) ? false  : true;
+
+    const image = ()=>{
+        return(
+            <div className='shdow-sm card mt-3 mb-3'>
+                <img className='w-100 img-detail' alt={props.title} src={props.image} />
+            </div>
+        )
+    }
     return (
         <Fragment>
             <div className='container p-0' key={props.id}>
                 <div className='row justify-content-center p-0'>
                     <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8 card shadow-sm' id='myList'>
                         <Hr />
-                        <div className='shdow-sm card mt-3 mb-3'>
-                            <img className='w-100 img-detail' alt={props.title} src={props.image} />
-                        </div>
+                        {isDefaul ? image() :''}
+                        
                         <Fk />
                         <div className='d-flex justify-content-center mt-2'>
                             <div className='w-100'>

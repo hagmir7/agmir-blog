@@ -11,6 +11,7 @@ import Detial from './pages/Detail';
 import { Helmet } from 'react-helmet-async';
 import Book from './pages/Book';
 import BookDetail from './pages/BookDetail';
+import  Menu  from './pages/Menu';
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/detail/:id' component={Detial} />
         <Route path='/books' component={Book} />
         <Route path='/book/:id' component={BookDetail} />
+        <Route path='/Menu' component={Menu} />
         
       </Switch>
    </Router>

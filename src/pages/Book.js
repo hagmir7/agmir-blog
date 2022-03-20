@@ -7,31 +7,52 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { Fragment } from 'react/cjs/react.production.min';
 import Nav from '../components/Nav';
 import { Helmet } from 'react-helmet-async';
+import { Spin, Space } from 'antd';
 
 
 function Book() {
 
+    const [loader, setLoder] = useState(12)
+    const [scroll, setScroll] = useState(false);
+
     useEffect(() => {
         fetchItems();
+        laodMore()
+
     }, []);
 
-    const [loade, setLoad] = useState(0);
 
-    const laodMore = ()=> {
-        
 
-        const counter = loade  + 24
-        setLoad(counter);
+    
+
+
+
+    
+    
+
+    const laodMore = async () => {
+        const counter = loader + 12
+        setLoder(counter)
         fetchItems();
-
+        
+        
     }
 
+    // window.addEventListener('resize', laodMore)
+    const more = ()=>{
+        if(window.scrollY >= 80){
+            laodMore()
+        }
+    }
+
+    window.addEventListener('scroll', more)
+    
 
 
 
     const [items, setItems] = useState(null);
     const fetchItems = async () => {
-        const data = await fetch(`https://www.freedaz.com/en/api/books/${loade}/`);
+        const data = await fetch(`https://www.freedaz.com/en/api/books/${loader}/`);
 
         const items = await data.json();
         const data_item = items.data;
@@ -56,19 +77,22 @@ function Book() {
         <Fragment>
             <Header />
             <Nav />
-            <div className='container-xxl'>
+            <div className='container-xxl '>
                 <div className='last row p-2 pb-3'>
                     {items ? items : <Loading />}
                 </div>
-                <div className='d-flex justify-content-center' onClick={laodMore}><button className='btn btn-info '>Load More</button></div>
+                <div className='d-flex justify-content-center'>
+                    {/* <button className='btn btn-info h1 text-white' id='btn' onClick={laodMore}>Load More</button>   */}
+                    <Space size="middle"><Spin size="large" /></Space>
+                </div>
             </div>
             <Footer />
             <Helmet>
-            <title>FreeWsad - Book</title>
-            <meta name="description" content='It is a digital library of electronic and international books and novels that contains books and novels in all fields in PDF & DOC format.' ></meta>
-            <link rel='canonical' href={`/books`} />
-            <meta name="keywords" content="books,library,electronic,novels,pdf books,programmig book,python book,learn programmming"/>
-        </Helmet>
+                <title>FreeWsad - Books</title>
+                <meta name="description" content='It is a digital library of electronic and international books and novels that contains books and novels in all fields in PDF & DOC format.' ></meta>
+                <link rel='canonical' href={`/books`} />
+                <meta name="keywords" content="books,library,electronic,novels,pdf books,programmig book,python book,learn programmming" />
+            </Helmet>
         </Fragment>
 
     )
