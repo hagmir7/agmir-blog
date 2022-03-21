@@ -39,7 +39,7 @@ function Contact() {
 
     axios({
       method: 'post',
-      url: 'http://127.0.0.1:8000/en/api/contact',
+      url: 'https://www.freedaz.com/en/api/contact',
       data: {
         "name": name,
         "email": email,
