@@ -1,21 +1,43 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import Loading from './Loading'
+import Loading from './Loading';
+import { Spin, Space } from 'antd';
 
 
 function Card(){
 
-
-
-
     useEffect(() => {
         fetchItems();
+        laodMore()
     },[]);
+
+    const [loader, setLoder] = useState(12)
+
+    // Load More
+    const laodMore = async () => {
+        const counter = loader + 12
+        setLoder(counter)
+        fetchItems();
+    }
+
+
+    //  Book Spener Function
+    const spin = ()=>{
+        let btn = document.querySelector('#btn');
+        let spiner = document.getElementById('spiner')
+        btn.classList.toggle('d-none')
+        spiner.classList.toggle('d-none')
+        setTimeout(function(){
+            btn.classList.toggle('d-none')
+            spiner.classList.toggle('d-none')
+        },3000)
+    }
+  
 
 
     const [items, setItems] = useState(null);
     const fetchItems = async () =>{
-        const data = await fetch('https://freewsad.herokuapp.com/en/api/posts/0');
+        const data = await fetch(`https://freewsad.herokuapp.com/en/api/posts/${loader}`);
 
         const items = await data.json();
         const dataItem = items.data;
@@ -49,6 +71,10 @@ function Card(){
     return(
         <div className='last row p-2 pb-3'>
             {items?items:<Loading />}
+            <div className='d-flex justify-content-center mt-3'>
+                <button className='btn btn-info h1 text-white rounded-pill' id='btn' onClick={laodMore} ><span onClick={spin}>Load More</span></button>  
+                <div className='d-none' id='spiner'><Space size="middle"><Spin size="large" /></Space></div>
+            </div>
         </div>
 
 

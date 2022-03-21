@@ -17,7 +17,7 @@ const Menu = ()=>{
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="list-group">
+                        <div className="list-group">
                             <MenuItem link="/" title="Home" image={Home} />
                             <MenuItem link="/" title="Blogs" image={Post} />
                             <MenuItem link="/books" title="Books" image={Book} />

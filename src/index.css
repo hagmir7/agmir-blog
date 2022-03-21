@@ -5,6 +5,7 @@ button:focus{
   outline: none!important;
   box-shadow: none!important;
 }
+
 .logo{
   display: flex;
   justify-content: center;
@@ -21,6 +22,7 @@ input{
 #d-none{
   display: none!important;
 }
+
 
 .search-input{
   border-radius: 18px;

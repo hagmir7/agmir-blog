@@ -8,12 +8,12 @@ import { Fragment } from 'react/cjs/react.production.min';
 import Nav from '../components/Nav';
 import { Helmet } from 'react-helmet-async';
 import { Spin, Space } from 'antd';
+import LoadingBook from '../components/LoadingBook';
 
 
 function Book() {
 
     const [loader, setLoder] = useState(12)
-    const [scroll, setScroll] = useState(false);
 
     useEffect(() => {
         fetchItems();
@@ -21,31 +21,39 @@ function Book() {
 
     }, []);
 
-
-
     
 
 
 
-    
-    
-
+    // Load More
     const laodMore = async () => {
         const counter = loader + 12
         setLoder(counter)
         fetchItems();
-        
-        
     }
 
     // window.addEventListener('resize', laodMore)
-    const more = ()=>{
-        if(window.scrollY >= 80){
-            laodMore()
-        }
-    }
+    // const more = ()=>{
+    //     console.log(window.scrollY)
+    //     if(window.scrollY >= 100){
+            
+    //     }
+    // }
 
-    window.addEventListener('scroll', more)
+    // window.addEventListener('scroll', more)
+
+    //  Book Spener Function
+    const spin = ()=>{
+        let btn = document.querySelector('#btn');
+        let spiner = document.getElementById('spiner')
+        btn.classList.toggle('d-none')
+        spiner.classList.toggle('d-none')
+        setTimeout(function(){
+            btn.classList.toggle('d-none')
+            spiner.classList.toggle('d-none')
+        },3000)
+    }
+  
     
 
 
@@ -60,9 +68,9 @@ function Book() {
             return (
                 data_item.map(item => (
                     <div key={item.slug} className="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-2 mt-2">
-                        <div className="card shadow-sm overflow-hidden">
-                            <Link to={`/book/${item.slug}`}>
-                                <img src={item.image} width="100%" alt={item.title}  />
+                        <div className="card card-book shadow-sm overflow-hidden h-100 m-0">
+                            <Link to={`/book/${item.slug}`} className='h-100'>
+                                <img src={item.image} width="100%" alt={item.title} />
                             </Link>
                         </div>
                     </div>
@@ -77,13 +85,13 @@ function Book() {
         <Fragment>
             <Header />
             <Nav />
-            <div className='container-xxl '>
+            <div className='container-xxl'>
                 <div className='last row p-2 pb-3'>
-                    {items ? items : <Loading />}
+                    {items ? items : <LoadingBook />}
                 </div>
                 <div className='d-flex justify-content-center'>
-                    {/* <button className='btn btn-info h1 text-white' id='btn' onClick={laodMore}>Load More</button>   */}
-                    <Space size="middle"><Spin size="large" /></Space>
+                    <button className='btn btn-info h1 text-white rounded-pill' id='btn' onClick={laodMore} ><span onClick={spin}>Load More</span></button>  
+                    <div className='d-none' id='spiner'><Space size="middle"><Spin size="large" /></Space></div>
                 </div>
             </div>
             <Footer />

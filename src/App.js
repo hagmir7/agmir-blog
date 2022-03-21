@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet-async';
 import Book from './pages/Book';
 import BookDetail from './pages/BookDetail';
 import Menu from './pages/Menu'
+import NotFoundPage from './pages/NotFoundPage';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path='/books' component={Book} />
         <Route path='/book/:id' component={BookDetail} />
         <Route path='/Menu' component={Menu} />
+        <Route path="*" component={NotFoundPage} />
         
       </Switch>
    </Router>
