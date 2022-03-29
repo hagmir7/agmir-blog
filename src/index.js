@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
@@ -8,14 +7,9 @@ import { HelmetProvider } from 'react-helmet-async';
 import 'antd/dist/antd.css';
 
 ReactDOM.render(
-  
   <React.StrictMode>
     <HelmetProvider>
     <App />
-
-  
-
-
     </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root')
