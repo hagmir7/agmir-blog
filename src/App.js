@@ -13,6 +13,8 @@ import Book from './pages/Book';
 import BookDetail from './pages/BookDetail';
 import Menu from './pages/Menu'
 import NotFoundPage from './pages/NotFoundPage';
+import Dashboard from './pages/Dashboard';
+import CreatePost from './pages/CreatePost';
 
 
 
@@ -25,6 +27,7 @@ function App() {
    <Router>
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/admin/dashboard" component={Dashboard} />
         <Route path="/about" component={About} />
         <Route path="/policy" component={Policy} />
         <Route path="/contact" component={Contact} />
@@ -33,6 +36,10 @@ function App() {
         <Route path='/books' component={Book} />
         <Route path='/book/:id' component={BookDetail} />
         <Route path='/Menu' component={Menu} />
+        <Route path='/create-post' component={CreatePost} />
+
+
+        
         <Route path="*" component={NotFoundPage} />
         
       </Switch>
