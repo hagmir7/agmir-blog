@@ -43,15 +43,16 @@ const BookDetailContent = (props) => {
                         </table>
                         <h2 className="h5">Download Book</h2>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
-                        <div className="w-100 my-5 d-flex justify-content-center">
+                        <div className="w-100 d-flex justify-content-center">
                             <a className="btn btn-primary w-50" href={props.book_file} target="_blanck">DOWNLOAD</a>
                         </div>
+                        <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                 </article>
             </div>
             <div className="col-12 col-md-5 col-lg-4 col-xl-4 position-relative">
                 <div className="position-sticky top-0">
                     <div className="card shadow-sm">
-                    <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
+                    <GoogleAd slot="2352137536" googleAdId="ca-pub-6043226569102012"/>
                     </div>
                     <div className="p-4 mt-3 bg-light card shadow-sm border">
                         <span className="fst-italic h4 p-1">Copyrights</span>
