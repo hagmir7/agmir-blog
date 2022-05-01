@@ -65,11 +65,6 @@ const BookDetailContent = (props) => {
         </div>
         <Helmet>
             <title>{props.name}</title>
-            <meta property="og:url" content={`/book/${props.id}`}  />
-            <meta property="og:type" content="article" />
-            <meta property="og:title" content={props.name} />
-            <meta property="og:description" content={props.description}  />
-            <meta property="og:image" content={props.image} />
 
             <meta name="description" content={props.description} ></meta>
             <link rel='canonical' href={`/book/${props.id}`} />
