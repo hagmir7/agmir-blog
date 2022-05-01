@@ -21,7 +21,7 @@ const BookDetail = ({match})=>{
         const data = ()=>{
           return (
             <BookDetailContent
-             name={item.name} image={item.image} description={item.description.slice(0,140)} id={match.params.id}
+             name={item.name} image={item.image} description={item.description.slice(0,140)} id={item.id}
              data={item.date} tags={item.tags} pages={item.pages} book_file={item.book_file}
              language={item.language} type_file={item.type_file}
             />

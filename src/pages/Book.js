@@ -32,6 +32,15 @@ function Book() {
         fetchItems();
     }
 
+    // window.addEventListener('resize', laodMore)
+    // const more = ()=>{
+    //     console.log(window.scrollY)
+    //     if(window.scrollY >= 100){
+            
+    //     }
+    // }
+
+    // window.addEventListener('scroll', more)
 
     //  Book Spener Function
     const spin = ()=>{
@@ -58,7 +67,7 @@ function Book() {
         const item = () => {
             return (
                 data_item.map(item => (
-                    <div key={item.slug} className="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-2 mt-2 px-2">
+                    <div key={item.slug} className="col-6 col-sm-6 col-md-3 col-lg-2 col-xl-2 mt-2">
                         <div className="card card-book shadow-sm overflow-hidden h-100 m-0">
                             <Link to={`/book/${item.slug}`} className='h-100'>
                                 <img src={item.image} width="100%" alt={item.title} />
@@ -76,7 +85,7 @@ function Book() {
         <Fragment>
             <Header />
             <Nav />
-            <div className='container-xxl p-0'>
+            <div className='container-xxl'>
                 <div className='last row p-2 pb-3'>
                     {items ? items : <LoadingBook />}
                 </div>

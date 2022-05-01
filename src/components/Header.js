@@ -7,7 +7,7 @@ function Header(){
         <div className="navbar-top d-none d-lg-block small bg-white">
         <div className="">
           <nav className="d-md-flex justify-content-between align-items-center p-2">
-            <ul className="nav mt-2">
+            <ul className="nav">
               <li className="nav-item">
                 <Link className="nav-link h6 py-0 text-secondary ps-0" to="/books">Books</Link>
               </li>
