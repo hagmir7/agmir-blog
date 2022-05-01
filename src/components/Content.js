@@ -23,7 +23,7 @@ function Detial(props) {
             <div className='container p-0' key={props.id}>
                 <div className='row justify-content-center p-0'>
                     <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8 card shadow-sm' id='myList'>
-                        <GoogleAd slot="4567237334" googleAdId="pub-6043226569102012"/>
+                        <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                         {isDefaul ? image() :''}
                         
                         <Fk />
@@ -33,7 +33,7 @@ function Detial(props) {
                                 <div dangerouslySetInnerHTML={{ __html: props.body }} />
                             </div>
                         </div>
-                        <GoogleAd slot="4567237334" googleAdId="pub-6043226569102012"/>
+                        <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                         
                     </div>
                 </div>
