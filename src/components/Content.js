@@ -1,5 +1,5 @@
 import { React, Fragment } from 'react';
-import Hr from '../ads/Hr';
+// import GoogleAd from '../ads/GoogleAd';
 import BodyDetail from './BodyDetail';
 import { Helmet } from 'react-helmet-async';
 import Fk from '../ads/Fk';
@@ -23,7 +23,8 @@ function Detial(props) {
             <div className='container p-0' key={props.id}>
                 <div className='row justify-content-center p-0'>
                     <div className='col-sm-12 col-md-10 col-lg-8 col-xl-8 card shadow-sm' id='myList'>
-                        <Hr />
+                        {/* <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/> */}
+                        <Fk />
                         {isDefaul ? image() :''}
                         
                         <Fk />
@@ -33,7 +34,8 @@ function Detial(props) {
                                 <div dangerouslySetInnerHTML={{ __html: props.body }} />
                             </div>
                         </div>
-                        <Hr />
+                        {/* <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/> */}
+                        <Fk />
                         
                     </div>
                 </div>
