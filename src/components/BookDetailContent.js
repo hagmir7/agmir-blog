@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import GoogleAd from "../ads/GoogleAd";
+import Fk from "../ads/Fk";
 
 
 const BookDetailContent = (props) => {
@@ -12,6 +13,7 @@ const BookDetailContent = (props) => {
                     <h1 className="blog-post-title h4 mt-2">{props.name}</h1>
                     <p className="text-left">{props.description}</p>
                     <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
+                    <Fk />
                     <hr/>
                         <div className="d-flex justify-content-center mb-3">
                             <div className="card shadow-sm overflow-hidden">
@@ -42,6 +44,7 @@ const BookDetailContent = (props) => {
                         </table>
                         <h2 className="h5">Download Book</h2>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
+                        <Fk />
                         <div className="w-100 my-5 d-flex justify-content-center">
                             <a className="btn btn-primary w-50" href={props.book_file} target="_blanck">DOWNLOAD</a>
                         </div>
@@ -51,6 +54,7 @@ const BookDetailContent = (props) => {
                 <div className="position-sticky top-0">
                     <div className="card shadow-sm">
                     <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
+                    <Fk />
                     </div>
                     <div className="p-4 mt-3 bg-light card shadow-sm border">
                         <span className="fst-italic h4 p-1">Copyrights</span>
