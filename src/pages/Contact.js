@@ -27,7 +27,7 @@ function Contact() {
     notification[type]({
       message: t("Message has been sent successfully"),
       description:
-        t("'contact-message-success'"),
+        t("contact-message-success"),
     });
   };
 
