@@ -1,3 +1,4 @@
+import jsCookie from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 // import { Link } from 'react-router-dom';
 import Loading from "./Loading"
@@ -8,11 +9,10 @@ function BodyDetail(){
         fetchItems();
     },[]);
 
-
+    const currentLanguageCode = jsCookie.get('i18next')
     const [items, setItems] = useState(null);
     const fetchItems = async () =>{
-        const data = await fetch('https://freewsad.herokuapp.com/en/api/english');
-
+        const data = await fetch(`https://freewsad.herokuapp.com/${currentLanguageCode}/api/posts/3`);
         const items = await data.json();
         const data_item = items.data;
         const item = ()=>{

@@ -4,16 +4,17 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Content from '../components/Content';
 import LoadingDetail from '../components/LoadignDetail';
-
+import JsCookies from 'js-cookie'
 
 function Detial({match}){
     useEffect(() => {
         fetchItem();
     },[]);
     
+    const currentLanguageCode = JsCookies.get("i18next")
     const [item, setItem] = useState(null);
     const fetchItem = async () =>{
-        const fetchItem = await fetch(`https://freewsad.herokuapp.com/en/api/english_detail/${match.params.id}`);
+        const fetchItem = await fetch(`https://freewsad.herokuapp.com/${currentLanguageCode}/api/english_detail/${match.params.id}`);
         const item = await fetchItem.json();
         const data_item = item.data;
         const data = ()=>{

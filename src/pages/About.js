@@ -3,13 +3,16 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Helmet } from 'react-helmet-async';
 import Nav from "../components/Nav";
+import { useTranslation } from "react-i18next";
+
 
 
 function About() {
+  const {t} = useTranslation()
   return (
     <div className="About">
       <Helmet>
-        <title>About Us - FreeWsad</title>
+        <title>{t("About Us - FreeWsad")}</title>
         <link rel='canonical' href="/policy" />
       </Helmet>
         <Header />
@@ -17,7 +20,7 @@ function About() {
           <div className="container">
             <div className="row">
             <div className='card shadow-sm p-3'>
-            <h1 className="h4">About Us.</h1>
+            <h1 className="h4">{t("About Us")}.</h1>
             <p>We respect the property rights of others, and are always keen not to violate their rights, so authors and publishing houses have the right to demand the removal of a download link for a book from the site. If you find a book that belongs to you and do not agree to the publication of the download link for the book, or you have a suggestion or complaint, write to us through the Contact Us page, or by e-mail at: supprot@freewsad.com
             </p>
             <p>We also confirm our full commitment to preserving the intellectual property rights and copyrights of books and that they belong to their owners and publishing houses, and we strive to publish books whose owners have authorized the right to publish them electronically, and we do not seek at all to violate the rights of others, and in the event that a book has ownership rights, we have put a link to request the deletion of a book We will not hesitate to remove any book that we find to be proprietary.

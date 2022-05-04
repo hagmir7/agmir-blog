@@ -9,7 +9,7 @@ import Fk from '../ads/Fk';
 function Detial(props) {
 
     const defaultImage = 'https://agmir-media.s3.amazonaws.com/default-post.png';
-    const isDefaul = defaultImage.slice(0,53) == props.image.slice(0,53) ? false  : true;
+    const isDefaul = defaultImage.slice(0,53) === props.image.slice(0,53) ? false  : true;
 
     const image = ()=>{
         return(

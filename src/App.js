@@ -15,6 +15,7 @@ import Menu from './pages/Menu'
 import NotFoundPage from './pages/NotFoundPage';
 import Dashboard from './pages/Dashboard';
 import CreatePost from './pages/CreatePost';
+import Language from './pages/Language';
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path='/book/:id' component={BookDetail} />
         <Route path='/Menu' component={Menu} />
         <Route path='/create-post' component={CreatePost} />
+        <Route path='/language' component={Language} />
 
 
         

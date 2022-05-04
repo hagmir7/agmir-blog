@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import GoogleAd from "../ads/GoogleAd";
+import { useTranslation } from "react-i18next";
+
 
 
 const BookDetailContent = (props) => {
+
+    const {t} = useTranslation()
     return (
         <div className="container-lg">
             <div className="row" key={props.id}>
@@ -19,32 +23,31 @@ const BookDetailContent = (props) => {
                                 <img className="book-detail-image" src={props.image} alt={props.name} />
                             </div>
                         </div>
-                        <h2 className="h5">About book</h2>
+                        <h2 className="h5">{t("About book")}</h2>
                         <table className="table table-hover border">
                             <tbody>
                                 <tr>
-                                    <th scope="row">Author</th>
+                                    <th scope="row">{t("Author")}</th>
                                     <td>books.goalkicker.com</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">File type</th>
+                                    <th scope="row">{t("File type")}</th>
                                     <td>{props.type_file}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">Language</th>
+                                    <th scope="row">{t("Language")}</th>
                                     <td>{props.language}</td>
                                 </tr>
-
                                 <tr>
-                                    <th scope="row">Pages</th>
+                                    <th scope="row">{t("Pages")}</th>
                                     <td>{props.pages}</td>
                                 </tr>
                             </tbody>
                         </table>
-                        <h2 className="h5">Download Book</h2>
+                        <h2 className="h5">{t("Download Book")}</h2>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                         <div className="w-100 d-flex justify-content-center">
-                            <a className="btn btn-primary w-50" href={props.book_file} target="_blanck">DOWNLOAD</a>
+                            <a className="btn btn-primary w-50" href={props.book_file} target="_blanck">{t("DOWNLOAD")}</a>
                         </div>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                 </article>
@@ -55,24 +58,21 @@ const BookDetailContent = (props) => {
                     <GoogleAd slot="2352137536" googleAdId="ca-pub-6043226569102012"/>
                     </div>
                     <div className="p-4 mt-3 bg-light card shadow-sm border">
-                        <span className="fst-italic h4 p-1">Copyrights</span>
+                        <span className="fst-italic h4 p-1">{t("Copyrights")}</span>
                         <p className="text-left">
-                            We respect the property rights of others, and are always keen not to violate their rights, so authors and publishing houses have the right to demand the removal of a download link for a book from the site. If you find a book that belongs to you and do not agree to the publication of the download link for the book, or you have a suggestion or complaint, write to us through the Contact Us page, or by email at:
+                            {t("copy-right")}
                             <a href="mailto:support@freewsad.com">support@freewsad.com</a></p>
-                        <Link to="/about" >Read More</Link>
+                        <Link to="/about" >{t("Read More")}</Link>
                     </div>
                 </div>
             </div>
         </div>
         <Helmet>
             <title>{props.name}</title>
-
             <meta name="description" content={props.description} ></meta>
             <link rel='canonical' href={`/book/${props.id}`} />
             <meta itemprop="image" content={props.image} />
             <meta name="keywords" content={props.tags}/>
-
-
         </Helmet>
         </div>
     )

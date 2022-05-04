@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Button, notification, Space ,Spin  } from 'antd';
+import { useTranslation } from "react-i18next";
 
 function Contact() {
 
@@ -17,14 +18,16 @@ function Contact() {
   const history = useHistory()
 
 
+  const {t} = useTranslation()
+
 
   
 
   const openNotificationWithIcon = type => {
     notification[type]({
-      message: 'Message has been sent successfully',
+      message: t("Message has been sent successfully"),
       description:
-        'Thank you, Your message has been sent. We will reply to you as soon as possible.',
+        t("'contact-message-success'"),
     });
   };
 
@@ -63,27 +66,27 @@ function Contact() {
       <div className='container mb-4 p-3'>
         <div className='w-100 row justify-content-center'>
           <div className='col-sm-12 col-md-10 col-lg-6 col-xl-6 card p-3 shadow-sm'>
-            <h1 className="h4">Contact Us</h1>
+            <h1 className="h4">{t("Contact Us")}</h1>
             <form>
-              <label htmlFor='name'>Name</label>
-              <input className='form-control mb-3' type='text' name='name' placeholder='Name...' 
+              <label htmlFor='name'>{t("Name")}</label>
+              <input className='form-control mb-3' type='text' name='name' placeholder={`${t("Name")}...`} 
               value={name} onChange={(e) => setName(e.target.value)} required />
 
-              <label htmlFor='emai'>Email</label>
-              <input className='form-control mb-3' type='email' name='email' placeholder='Email...'
+              <label htmlFor='emai'>{t("Email")}</label>
+              <input className='form-control mb-3' type='email' name='email' placeholder={`${t("Email")}...`} 
               value={email} onChange={(e) => setEmail(e.target.value)} required/>
 
-              <label htmlFor='message'>Message</label>
-              <textarea className='form-control mb-3' name='body' placeholder='Message...' 
+              <label htmlFor='message'>{t("Message")}</label>
+              <textarea className='form-control mb-3' name='body' placeholder={`${t("Message")}...`} 
               value={body} onChange={(e) => setBody(e.target.value)} required/>
-              <Button className='btn btn-ag ag-blue' id="btn-contact" type="button" onClick={contactInfo}>Send Message</Button>
+              <Button className='btn btn-ag ag-blue' id="btn-contact" type="button" onClick={contactInfo}>{t("Send Message")}</Button>
              <div id="spiner" className="d-none"><Space size="middle"> <Spin size="small"></Spin> </Space></div>
             </form>
           </div>
         </div>
       </div>
       <Helmet>
-        <title>Contact Us | FreeWsad</title>
+        <title>{t("Contact Us | FreeWsad")}</title>
         <link rel='canonical' href="/policy" />
 
       </Helmet>

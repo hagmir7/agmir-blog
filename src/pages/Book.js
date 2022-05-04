@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-import Loading from "../components/Loading"
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
@@ -9,12 +7,14 @@ import Nav from '../components/Nav';
 import { Helmet } from 'react-helmet-async';
 import { Spin, Space } from 'antd';
 import LoadingBook from '../components/LoadingBook';
+import jsCookie from 'js-cookie';
+import { useTranslation } from 'react-i18next';
 
 
 function Book() {
 
     const [loader, setLoder] = useState(12)
-
+    const currentLanguageCode = jsCookie.get('i18next')
     useEffect(() => {
         fetchItems();
         laodMore()
@@ -24,8 +24,8 @@ function Book() {
     
 
 
-
-    // Load More
+    const {t} = useTranslation()
+     // Load More
     const laodMore = async () => {
         const counter = loader + 12
         setLoder(counter)
@@ -51,7 +51,7 @@ function Book() {
 
     const [items, setItems] = useState(null);
     const fetchItems = async () => {
-        const data = await fetch(`https://www.freedaz.com/en/api/books/${loader}/`);
+        const data = await fetch(`https://www.freedaz.com/${currentLanguageCode}/api/books/${loader}/`);
 
         const items = await data.json();
         const data_item = items.data;
@@ -81,13 +81,13 @@ function Book() {
                     {items ? items : <LoadingBook />}
                 </div>
                 <div className='d-flex justify-content-center'>
-                    <button className='btn btn-info h1 text-white rounded-pill' id='btn' onClick={laodMore} ><span onClick={spin}>Load More</span></button>  
+                    <button className='btn btn-info h1 text-white rounded-pill' id='btn' onClick={laodMore} ><span onClick={spin}>{t("Load More")}</span></button>  
                     <div className='d-none' id='spiner'><Space size="middle"><Spin size="large" /></Space></div>
                 </div>
             </div>
             <Footer />
             <Helmet>
-                <title>FreeWsad - Books</title>
+                <title>{t("Books - Freewsad")}</title>
                 <meta name="description" content='It is a digital library of electronic and international books and novels that contains books and novels in all fields in PDF & DOC format.' ></meta>
                 <link rel='canonical' href={`/books`} />
                 <meta name="keywords" content="books,library,electronic,novels,pdf books,programmig book,python book,learn programmming" />
