@@ -29,6 +29,13 @@
   "Back Home": "Back Home",
   "Contact Us": "Contact Us",
   "About book": "About book",
-  "Home": "Home"
+  "Home": "Home",
+  "How to use language":"How to use language",
+  "lang_info": "In the event that a specific language is used, the site's content will be displayed in this language for this, it is recommended to use the language you are good at. To facilitate browsing the site ...",
+  "Email...": "Email...",
+  "lagn_chang_msg" : "The language has been successfully changed. All the content of the site will be shown in the language you have chosen",
+  "Language changed successfully!": "Language changed successfully!",
+  "Enter your email to download": "Enter you email to download"
+
 
 }

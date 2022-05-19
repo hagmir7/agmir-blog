@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import GoogleAd from "../ads/GoogleAd";
 import { useTranslation } from "react-i18next";
+import DownloadModal from "./DownloadModal";
 
 
 
@@ -47,7 +48,7 @@ const BookDetailContent = (props) => {
                         <h2 className="h5">{t("Download Book")}</h2>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                         <div className="w-100 d-flex justify-content-center">
-                            <a className="btn btn-primary w-50" href={props.book_file} target="_blanck">{t("DOWNLOAD")}</a>
+                            <DownloadModal  link={props.book_file}/>
                         </div>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                 </article>
