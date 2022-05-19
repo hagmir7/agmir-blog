@@ -46,9 +46,8 @@ const Lang = () => {
         const openNotification = () => {
         notification.open({
             message: t("Language changed successfully!"),
-            description:
-            t('lang_chang_msg'),
-            icon: <SmileOutlined style={{ color: '#108ee9', padding: '0 15px' }} />,
+            description: t('lang_chang_msg'),
+            icon: <SmileOutlined style={{ color: '#108ee9' }} />,
         });
         };
 
