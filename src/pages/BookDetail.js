@@ -2,7 +2,6 @@
 import {React, useEffect, useState} from 'react';
 import BookDetailContent from '../components/BookDetailContent';
 import Footer from '../components/Footer';
-import Header from '../components/Header';
 import LoadingDetail from '../components/LoadignDetail';
 import Nav from '../components/Nav';
 
@@ -33,7 +32,6 @@ const BookDetail = ({match})=>{
 
     return (
         <>
-        <Header />
         <Nav />
         <div>{item?item:<LoadingDetail />}</div>
         <Footer />

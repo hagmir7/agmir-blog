@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import { Fragment } from 'react/cjs/react.production.min';
@@ -74,7 +73,6 @@ function Book() {
 
     return (
         <Fragment>
-            <Header />
             <Nav />
             <div className='container-xxl p-0'>
                 <div className='last row p-2 pb-3'>

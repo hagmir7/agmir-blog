@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
 import Nav from "../components/Nav";
 import { Tooltip, Button } from 'antd';
 
@@ -30,9 +29,7 @@ const Cards = (props) => {
 const Dashboard = () => {
     return (
         <>
-            <Header />
             <Nav />
-
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-8 card p-2">

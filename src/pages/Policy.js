@@ -1,6 +1,5 @@
 import { React } from "react";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Nav from "../components/Nav";
 import { Helmet } from 'react-helmet-async';
 
@@ -13,7 +12,6 @@ function Policy() {
         <title>Policy - FreeWsad</title>
         <link rel='canonical' href="/policy" />
       </Helmet>
-      <Header />
       <Nav />
  
       <div className='container bg-light p-3 policy'>

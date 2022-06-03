@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Nav from "../components/Nav";
 import MenuItem from "../components/MenuItem";
 // import images
@@ -16,7 +15,6 @@ const Menu = ()=>{
     return(
         
         <>
-            <Header />
             <Nav />
             <div className="container">
                 <div className="row justify-content-center">

@@ -1,6 +1,5 @@
 import {React, useEffect, useState} from 'react';
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Content from '../components/Content';
 import LoadingDetail from '../components/LoadignDetail';
@@ -30,7 +29,6 @@ function Detial({match}){
 
     return(
         <div>
-        < Header/>
         < Nav />
         <div className="container">
          <div className='row justify-content-center'>

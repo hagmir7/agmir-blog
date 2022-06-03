@@ -1,4 +1,3 @@
-import Header from "../components/Header"
 import Nav from "../components/Nav";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
@@ -81,9 +80,7 @@ class CreatePost extends Component {
     }
     return (
         <>
-            <Header />
             <Nav />
-
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-8 card p-2">

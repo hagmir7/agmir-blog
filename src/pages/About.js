@@ -1,6 +1,5 @@
 import {React} from "react";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import { Helmet } from 'react-helmet-async';
 import Nav from "../components/Nav";
 import { useTranslation } from "react-i18next";
@@ -15,7 +14,6 @@ function About() {
         <title>{t("About Us - FreeWsad")}</title>
         <link rel='canonical' href="/policy" />
       </Helmet>
-        <Header />
         <Nav />
           <div className="container">
             <div className="row">

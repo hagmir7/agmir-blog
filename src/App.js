@@ -24,28 +24,22 @@ import Language from './pages/Language';
 function App() {
   return (
     <div className="App">
-
-   <Router>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/admin/dashboard" component={Dashboard} />
-        <Route path="/about" component={About} />
-        <Route path="/policy" component={Policy} />
-        <Route path="/contact" component={Contact} />
-        {/* <Route path='/detail/:id' component={Detial} /> */}
-        <Route path='/detail/:id' component={Detial} />
-        <Route path='/books' component={Book} />
-        <Route path='/book/:id' component={BookDetail} />
-        <Route path='/Menu' component={Menu} />
-        <Route path='/create-post' component={CreatePost} />
-        <Route path='/language' component={Language} />
-
-
-        
-        <Route path="*" component={NotFoundPage} />
-        
-      </Switch>
-   </Router>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/admin/dashboard" component={Dashboard} />
+          <Route path="/about" component={About} />
+          <Route path="/policy" component={Policy} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/detail/:id" component={Detial} />
+          <Route path="/books" component={Book} />
+          <Route path="/book/:id" component={BookDetail} />
+          <Route path="/Menu" component={Menu} />
+          <Route path="/create-post" component={CreatePost} />
+          <Route path="/language" component={Language} />        
+          <Route path="*" component={NotFoundPage} />
+        </Switch>
+    </Router>
 
     </div>
   );
@@ -54,7 +48,6 @@ function App() {
 const Home = ()=>{
   return(
     <div className='bg-light' >
-      < Header/>
       < Nav />
       <div className='container'>
         < Body />

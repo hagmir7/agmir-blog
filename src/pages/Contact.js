@@ -1,6 +1,5 @@
 import {React, useState} from "react";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Nav from "../components/Nav";
 import { } from 'antd';
 
@@ -9,6 +8,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { Button, notification, Space ,Spin  } from 'antd';
 import { useTranslation } from "react-i18next";
+import { Fragment } from "react/cjs/react.production.min";
 
 function Contact() {
 
@@ -60,8 +60,7 @@ function Contact() {
   }
 
   return (
-    <div className="Contact">
-      <Header />
+    <Fragment>
       <Nav />
       <div className='container mb-4 p-3'>
         <div className='w-100 row justify-content-center'>
@@ -91,7 +90,7 @@ function Contact() {
 
       </Helmet>
       <Footer />
-    </div>
+    </Fragment>
   );
 }
 

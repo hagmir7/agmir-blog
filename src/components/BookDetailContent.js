@@ -3,12 +3,23 @@ import { Helmet } from "react-helmet-async";
 import GoogleAd from "../ads/GoogleAd";
 import { useTranslation } from "react-i18next";
 import DownloadModal from "./DownloadModal";
+import coockies from 'js-cookie';
+
 
 
 
 const BookDetailContent = (props) => {
 
     const {t} = useTranslation()
+
+    const ModelDownload = ()=> <DownloadModal link={props.book_file} />;
+    const BtnDownload = ()=> {
+        return(
+                <div>
+                     <a className='btn btn-success' href={props.book_file} target="_blank">{t("DOWNLOAD")}</a>
+                </div>
+            )
+    };
     return (
         <div className="container-lg">
             <div className="row" key={props.id}>
@@ -48,13 +59,14 @@ const BookDetailContent = (props) => {
                         <h2 className="h5">{t("Download Book")}</h2>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                         <div className="w-100 d-flex justify-content-center">
-                            <DownloadModal  link={props.book_file}/>
+                            {coockies.get('email') == 'valid' ? BtnDownload() : ModelDownload() }
+                            {/* <DownloadModal  link={props.book_file}/> */}
                         </div>
                         <GoogleAd slot="4567237334" googleAdId="ca-pub-6043226569102012"/>
                 </article>
             </div>
             <div className="col-12 col-md-5 col-lg-4 col-xl-4 position-relative">
-                <div className="position-sticky top-0">
+                <div className="position-sticky" style={{ top:'60px' }}>
                     <div className="card shadow-sm">
                     <GoogleAd slot="2352137536" googleAdId="ca-pub-6043226569102012"/>
                     </div>

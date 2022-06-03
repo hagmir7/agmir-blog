@@ -52,7 +52,8 @@ const Lang = () => {
         };
 
     return (
-        <select
+        <div className="d-none d-lg-block small">
+            <select
             value={i18n.language}
             onChange={(e) =>{
                 i18n.changeLanguage(e.target.value);
@@ -65,7 +66,8 @@ const Lang = () => {
             {languages.map(item =>(
                 <option value={item.code}>{item.name}</option>
             ))}
-        </select>
+         </select>
+        </div>
     )
 }
 

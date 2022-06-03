@@ -9,22 +9,25 @@ import { Spin, Space } from 'antd';
 
 
 const loadingarkup = (
-  <div className='d-flex justify-content-center p-5 align-items-center w-100'>
-    <Space size="large">
-      <Spin size="large" />
-    </Space>
-  </div>
+  <div className='w-100 landig bg-light d-flex justify-content-center align-items-center'>
+      <div>
+        <Space size="large">
+          <Spin size="large" />
+        </Space>
+      </div>    
+   </div>
 )
 
 
 ReactDOM.render(
-  <Suspense fallback={loadingarkup}>
-    <React.StrictMode>
-      <HelmetProvider>
+
+  <React.StrictMode>
+    <HelmetProvider>
+      <Suspense fallback={loadingarkup}>
         <App />
-      </HelmetProvider>
-    </React.StrictMode>
-  </Suspense>,
+      </Suspense>
+    </HelmetProvider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
