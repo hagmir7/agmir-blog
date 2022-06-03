@@ -27,7 +27,7 @@ const DownloadModal = (props) => {
         if(email != ''){
             axios({
                 method: 'POST',
-                url: 'https://wwww.freedaz.com/en/api/save-email',
+                url: 'https://www.freedaz.com/en/api/save-email',
                 data: {
                   "email": email,
                 }
