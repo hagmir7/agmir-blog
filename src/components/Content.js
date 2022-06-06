@@ -45,10 +45,15 @@ function Detial(props) {
                     <link rel='canonical' href={`/detail/${props.id}`} />
                     <meta itemprop="image" content={props.image} />
                     <meta name="keywords" content={props.tags}/>
+
+                    <meta property="og:url" content="http://www.freewsad.com" />
+                    <meta property="og:type" content="article" />
+                    <meta property="og:title" content={props.title} />
+                    <meta property="og:description" content={props.description} />
                 </Helmet>
                 <BodyDetail />
             </div>
         </Fragment>
-    )
+    ) 
 }
 export default Detial;

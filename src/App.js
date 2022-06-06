@@ -62,6 +62,9 @@ const Home = ()=>{
           <meta name="author" content="freewsad.com" />
           <link rel='canonical' href="/" />
           <meta itemprop="image" content="%PUBLIC_URL%/favicon.webp" data-rh="true" />
+          <meta name="keywords" content="python,js,javascript,html,css,c++,c#,java,bootstrap,react,vuejs,anguler,reactjs,design,php,code,coding,templates,programming"/>
+          <meta property="og:title" content="FreeWsad - The Best Website For Education" />
+          <meta property="og:description" content="You can enjoy the Topics and Courses you love and download the original content, and share it all with your friends in FreeWsad." />
       </Helmet>
     </div>
 

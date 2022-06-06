@@ -86,6 +86,9 @@ const BookDetailContent = (props) => {
             <link rel='canonical' href={`/book/${props.id}`} />
             <meta itemprop="image" content={props.image} />
             <meta name="keywords" content={props.tags}/>
+            <meta property="og:type" content="article" />
+            <meta property="og:title" content={props.name} />
+            <meta property="og:description" content={props.description} />
         </Helmet>
         </div>
     )
